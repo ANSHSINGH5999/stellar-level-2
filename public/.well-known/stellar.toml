@@ -1,0 +1,49 @@
+NETWORK_PASSPHRASE="Test SDF Network ; September 2015"
+FEDERATION_SERVER=""
+HORIZON_URL="https://horizon-testnet.stellar.org"
+ACCOUNTS=[
+  "GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5"
+]
+VERSION="2.0.0"
+
+[DOCUMENTATION]
+ORG_NAME="Stellar Swap dApp"
+ORG_DBA="Stellar Swap"
+ORG_URL="http://localhost:3001"
+ORG_LOGO="http://localhost:3001/logo.png"
+ORG_DESCRIPTION="A decentralized token swap application built on the Stellar testnet. Swap XLM and USDC using Stellar's path payment operations."
+ORG_PHYSICAL_ADDRESS="Testnet Environment"
+ORG_OFFICIAL_EMAIL="support@stellarswap.example.com"
+ORG_SUPPORT_EMAIL="support@stellarswap.example.com"
+ORG_GITHUB="stellar-swap-dapp"
+ORG_TWITTER=""
+
+[[PRINCIPALS]]
+name="Stellar Swap Admin"
+email="admin@stellarswap.example.com"
+github=""
+twitter=""
+keybase=""
+
+[[CURRENCIES]]
+code="XLM"
+issuer=""
+display_decimals=7
+name="Stellar Lumens"
+desc="The native asset of the Stellar network. XLM is used to pay transaction fees and maintain minimum account balances."
+image="https://stellar.org/images/stellar-logo-single.svg"
+is_asset_anchored=false
+anchor_asset_type="other"
+
+[[CURRENCIES]]
+code="USDC"
+issuer="GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5"
+display_decimals=2
+name="USD Coin"
+desc="USDC is a fully reserved stablecoin pegged to the US Dollar, issued by Circle on the Stellar testnet. Each USDC token is backed 1:1 with US dollars held in reserve."
+image="https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/stellar/assets/GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5/logo.png"
+is_asset_anchored=true
+anchor_asset_type="fiat"
+anchor_asset="USD"
+redemption_instructions="Visit https://www.circle.com/usdc to redeem USDC for USD. This is a testnet token and has no real-world value."
+conditions="Testnet asset only. Not redeemable for real USD. For testing purposes only."
