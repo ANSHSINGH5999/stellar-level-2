@@ -4,6 +4,25 @@ A full-stack decentralized payment tracking application built on the **Stellar b
 
 ---
 
+## Screenshots
+
+### Full App — Multi-Wallet Connected + 3D Background
+![Full app UI with both wallets connected and 3D background](public/screenshots/wallet-connect.png)
+
+### Wallet Panel + Smart Contract State + Transaction History
+![Wallet panel showing Freighter connected, contract state and live tx history](public/screenshots/app-ui.png)
+
+### Freighter Wallet — Transaction Confirmation Popup
+![Freighter extension showing Confirm Transaction dialog with fee details](public/screenshots/payment-form.png)
+
+### Payment Recorded — Confirmed Status + Updated Contract State
+![App showing confirmed payment status and updated contract stats (1337 XLM)](public/screenshots/tx-pending.png)
+
+### On-Chain Proof — Stellar Expert Explorer
+![Stellar Expert showing successful record_payment contract invocation on testnet](public/screenshots/tx-confirmed.png)
+
+---
+
 ## Live Demo
 
 > Run locally — see [Setup Instructions](#setup-instructions) below.
