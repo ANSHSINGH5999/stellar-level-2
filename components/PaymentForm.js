@@ -23,7 +23,10 @@ export default function PaymentForm({ connectedWallets, onSuccess }) {
     setTxState({ status: 'idle' });
 
     // ── Validation ────────────────────────────────────────────────────────────
-    const sender = hasManyWallets ? fromAddress : connectedWallets[0]?.address;
+    const selectedWallet = hasManyWallets
+      ? connectedWallets.find((w) => w.address === fromAddress)
+      : connectedWallets[0];
+    const sender = selectedWallet?.address;
     if (!sender || !isValidStellarAddress(sender)) {
       setError('Please select a valid sender wallet address.');
       return;
@@ -57,7 +60,7 @@ export default function PaymentForm({ connectedWallets, onSuccess }) {
       // ── Sign with wallet ───────────────────────────────────────────────────
       let signedXdr;
       try {
-        signedXdr = await signTx(transaction.toXDR(), NETWORK_PASSPHRASE);
+        signedXdr = await signTx(selectedWallet.walletId, transaction.toXDR(), NETWORK_PASSPHRASE);
       } catch (signErr) {
         const msg = signErr.message || '';
         if (msg.toLowerCase().includes('not found') || msg.toLowerCase().includes('not installed')) {
