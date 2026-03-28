@@ -25,9 +25,9 @@ body {
    TRACKER LAYOUT
 ══════════════════════════════════════════════════════════════════════════ */
 .tracker-layout {
-  max-width: 1120px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 24px 16px 80px;
+  padding: 28px 20px 80px;
 }
 
 .tracker-header {
@@ -57,7 +57,7 @@ body {
 .tracker-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 24px;
 }
 
 @media (max-width: 780px) {
@@ -65,22 +65,26 @@ body {
   .tracker-title { font-size: 1.9rem; }
 }
 
-.tracker-col { display: flex; flex-direction: column; gap: 18px; }
+.tracker-col { display: flex; flex-direction: column; gap: 24px; }
 
 /* ══════════════════════════════════════════════════════════════════════════
    WALLET PANEL
 ══════════════════════════════════════════════════════════════════════════ */
 .wallet-panel {
-  background: rgba(10, 8, 30, 0.55);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 18px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06);
-  padding: 22px;
+  background: rgba(12, 9, 35, 0.68);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(108, 92, 231, 0.28);
+  border-radius: 24px;
+  box-shadow:
+    0 12px 48px rgba(0,0,0,0.55),
+    0 0 0 1px rgba(255,255,255,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.09),
+    0 0 40px rgba(108,92,231,0.08);
+  padding: 28px;
 }
 
-.wp-header { margin-bottom: 18px; }
+.wp-header { margin-bottom: 22px; }
 
 .wp-title-row {
   display: flex;
@@ -90,7 +94,7 @@ body {
 }
 
 .wp-title {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: 0.02em;
@@ -139,27 +143,42 @@ body {
 
 /* Wallet card */
 .wp-card {
-  border-radius: 14px;
-  padding: 16px;
-  border: 1px solid rgba(255,255,255,0.06);
-  background: rgba(255,255,255,0.025);
-  transition: border-color 0.25s, background 0.25s;
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.09);
+  background: rgba(255,255,255,0.035);
+  transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
 }
 
-.wp-card-primary { border-color: rgba(108, 92, 231, 0.2); }
-.wp-card-primary:hover { border-color: rgba(108, 92, 231, 0.4); background: rgba(108,92,231,0.05); }
+.wp-card-primary {
+  border-color: rgba(108, 92, 231, 0.35);
+  box-shadow: 0 4px 24px rgba(108,92,231,0.12), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.wp-card-primary:hover {
+  border-color: rgba(108, 92, 231, 0.55);
+  background: rgba(108,92,231,0.08);
+  box-shadow: 0 6px 32px rgba(108,92,231,0.22), inset 0 1px 0 rgba(255,255,255,0.08);
+}
 
-.wp-card-secondary { border-color: rgba(255,255,255,0.06); }
-.wp-card-secondary:hover { border-color: rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); }
+.wp-card-secondary {
+  border-color: rgba(0, 212, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0,212,255,0.05);
+}
+.wp-card-secondary:hover {
+  border-color: rgba(0, 212, 255, 0.32);
+  background: rgba(0,212,255,0.05);
+  box-shadow: 0 6px 28px rgba(0,212,255,0.12);
+}
 
 .wp-card-connected.wp-card-primary {
-  border-color: rgba(0, 212, 255, 0.35) !important;
-  background: rgba(0, 212, 255, 0.05) !important;
-  box-shadow: 0 0 20px rgba(0,212,255,0.08);
+  border-color: rgba(0, 212, 255, 0.5) !important;
+  background: rgba(0, 212, 255, 0.07) !important;
+  box-shadow: 0 0 28px rgba(0,212,255,0.15), 0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(0,212,255,0.15) !important;
 }
 .wp-card-connected.wp-card-secondary {
-  border-color: rgba(0, 230, 118, 0.25) !important;
-  background: rgba(0, 230, 118, 0.04) !important;
+  border-color: rgba(0, 230, 118, 0.4) !important;
+  background: rgba(0, 230, 118, 0.06) !important;
+  box-shadow: 0 0 24px rgba(0,230,118,0.12), 0 4px 20px rgba(0,0,0,0.3) !important;
 }
 
 .wp-card-header {
@@ -394,22 +413,26 @@ body {
    CONTRACT PANEL
 ══════════════════════════════════════════════════════════════════════════ */
 .contract-panel {
-  background: rgba(10, 8, 30, 0.55);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 18px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06);
-  padding: 22px;
+  background: rgba(12, 9, 35, 0.68);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(0, 212, 255, 0.22);
+  border-radius: 24px;
+  box-shadow:
+    0 12px 48px rgba(0,0,0,0.55),
+    0 0 0 1px rgba(255,255,255,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.09),
+    0 0 40px rgba(0,212,255,0.07);
+  padding: 28px;
 }
 
 .contract-panel-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
-.contract-panel-header h3 { color: #fff; font-size: 1rem; font-weight: 700; margin: 0; }
+.contract-panel-header h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin: 0; }
 
 .refresh-btn {
   background: transparent;
@@ -428,26 +451,33 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 12px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 9px;
-  margin-bottom: 14px;
+  padding: 11px 16px;
+  background: rgba(74, 144, 217, 0.06);
+  border: 1px solid rgba(74, 144, 217, 0.22);
+  border-radius: 13px;
+  margin-bottom: 18px;
+  box-shadow: inset 0 1px 0 rgba(74,144,217,0.1);
 }
 .contract-id-label { color: rgba(255,255,255,0.3); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.07em; }
 .contract-id-val { color: #4a90d9; font-family: monospace; font-size: 0.78rem; text-decoration: none; }
 .contract-id-val:hover { text-decoration: underline; }
 
-.contract-stats { display: flex; flex-direction: column; gap: 10px; }
+.contract-stats { display: flex; flex-direction: column; gap: 14px; }
 
 .contract-stat {
-  padding: 13px 16px;
-  background: rgba(0, 212, 255, 0.05);
-  border: 1px solid rgba(0, 212, 255, 0.12);
-  border-radius: 11px;
+  padding: 18px 20px;
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,212,255,0.06), inset 0 1px 0 rgba(0,212,255,0.1);
+  transition: border-color 0.25s, box-shadow 0.25s;
 }
-.contract-stat-label { color: rgba(255,255,255,0.4); font-size: 0.75rem; margin-bottom: 5px; }
-.contract-stat-value { color: #fff; font-size: 1.5rem; font-weight: 800; }
+.contract-stat:hover {
+  border-color: rgba(0, 212, 255, 0.38);
+  box-shadow: 0 6px 28px rgba(0,212,255,0.12), inset 0 1px 0 rgba(0,212,255,0.15);
+}
+.contract-stat-label { color: rgba(255,255,255,0.45); font-size: 0.78rem; margin-bottom: 7px; text-transform: uppercase; letter-spacing: 0.06em; }
+.contract-stat-value { color: #fff; font-size: 1.8rem; font-weight: 800; }
 
 .contract-note { color: rgba(255,255,255,0.2); font-size: 0.7rem; margin-top: 12px; text-align: center; font-style: italic; }
 
@@ -455,17 +485,21 @@ body {
    PAYMENT FORM (inside swap-card)
 ══════════════════════════════════════════════════════════════════════════ */
 .swap-card {
-  background: rgba(10, 8, 30, 0.55);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 18px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06);
-  padding: 24px;
+  background: rgba(12, 9, 35, 0.68);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(245, 158, 11, 0.22);
+  border-radius: 24px;
+  box-shadow:
+    0 12px 48px rgba(0,0,0,0.55),
+    0 0 0 1px rgba(255,255,255,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.09),
+    0 0 40px rgba(245,158,11,0.07);
+  padding: 30px;
 }
 
 .payment-form { display: flex; flex-direction: column; gap: 0; }
-.payment-form-title { color: #fff; font-size: 1rem; font-weight: 700; margin-bottom: 18px; letter-spacing: 0.01em; }
+.payment-form-title { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 22px; letter-spacing: 0.01em; }
 .payment-form-empty { color: rgba(255,255,255,0.3); font-size: 0.875rem; text-align: center; padding: 28px 0; line-height: 1.6; }
 
 .form-group { margin-bottom: 14px; }
@@ -609,17 +643,21 @@ body {
    TRANSACTION HISTORY
 ══════════════════════════════════════════════════════════════════════════ */
 .history-container {
-  background: rgba(10, 8, 30, 0.55);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 18px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06);
-  padding: 22px;
+  background: rgba(12, 9, 35, 0.68);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(0, 230, 118, 0.18);
+  border-radius: 24px;
+  box-shadow:
+    0 12px 48px rgba(0,0,0,0.55),
+    0 0 0 1px rgba(255,255,255,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.09),
+    0 0 40px rgba(0,230,118,0.06);
+  padding: 28px;
 }
 
-.history-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-.history-title  { color: #fff; font-size: 1rem; font-weight: 700; margin: 0; }
+.history-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.history-title  { color: #fff; font-size: 1.1rem; font-weight: 700; margin: 0; }
 .history-live   { color: #00e676; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; animation: pulse 2s ease-in-out infinite; }
 
 .history-loading { display: flex; justify-content: center; padding: 16px 0; }
@@ -628,19 +666,27 @@ body {
 .tx-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 11px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  transition: background 0.25s;
+  gap: 14px;
+  padding: 13px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.02);
+  margin-bottom: 8px;
+  transition: background 0.25s, border-color 0.25s;
 }
-.tx-row:last-child { border-bottom: none; padding-bottom: 0; }
+.tx-row:last-child { margin-bottom: 0; }
+.tx-row:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.09);
+}
 
 .tx-row-new {
-  background: rgba(0,230,118,0.06);
-  border-radius: 9px;
-  padding: 11px 8px;
-  margin: 0 -8px;
+  background: rgba(0,230,118,0.07);
+  border-color: rgba(0,230,118,0.22);
+  border-radius: 12px;
+  padding: 13px 12px;
   animation: slideIn 0.3s ease;
+  box-shadow: 0 0 16px rgba(0,230,118,0.08);
 }
 
 .tx-badge {
